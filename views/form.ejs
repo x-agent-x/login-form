@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <% if(locals.msg){ %>
+    <h1><%= msg('Hello') %></h1>
+    <% } %>
+    <form action="/submit" method="POST">
+      <label for="username">اسم المستخدم</label>
+      <input type="text" name="username" id="user-n" />
+      <label for="password">كلمة السر</label>
+      <input type="password" name="password" id="pass-w" />
+
+      <input type="submit" value="تاكيد" id="submit-btn" />
+    </form>
+  </body>
+</html>
